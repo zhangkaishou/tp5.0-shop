@@ -8,3 +8,5 @@
 //.htaccess
 //*payment_*_respond.php
 //*payment_*_notify.php
+runtime
+.idea
