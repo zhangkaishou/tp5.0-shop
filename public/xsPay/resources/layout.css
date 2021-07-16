@@ -1,0 +1,138 @@
+body {
+	background: url("images/bg_container.gif") repeat-x 0px 0px
+		rgb(255, 255, 255);
+	line-height: 20px;
+	font-weight: 400;
+	margin: 0pt auto;
+	padding: 0px;
+	width: 100%;
+	color: rgb(51, 51, 51);
+	font-family: 宋体, Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	background-color: rgb(255, 255, 255);
+}
+
+ul {
+	margin: 0pt;
+	padding: 0pt;
+	line-height: 20px;
+	font-weight: 400;
+	list-style: none;
+}
+
+ol {
+	margin: 0pt;
+	padding: 0pt;
+	line-height: 20px;
+	font-weight: 400;
+	list-style: none;
+}
+
+li {
+	margin: 0pt;
+	padding: 0pt;
+	line-height: 20px;
+	font-weight: 400;
+}
+
+p {
+	margin: 0pt;
+	padding: 0pt;
+	line-height: 20px;
+	font-weight: 400;
+}
+
+a:link {
+	color: rgb(102, 102, 102);
+	text-decoration: none;
+}
+
+a:visited {
+	color: rgb(102, 102, 102);
+	text-decoration: none;
+}
+
+a:active {
+	color: rgb(102, 102, 102);
+	text-decoration: underline;
+}
+
+a:hover {
+	color: rgb(102, 102, 102);
+	text-decoration: underline;
+}
+
+img {
+    border: 0 none;
+}
+
+#container {
+	margin: 0px auto;
+	width: 950px;
+	overflow: hidden;
+}
+
+#header {
+    float: left;
+    padding-top: 20px;
+    width: 100%;
+}
+
+#header .logo {
+    float: left;
+}
+
+#header ul {
+    float: left;
+    line-height: 18px;
+    margin-left: 8px;
+    margin-top: 20px;
+}
+
+#header .register {
+    border-bottom: 1px solid #DDDDDD;
+    color: #BBBCBC;
+    float: right;
+    margin-right: 17px;
+    padding-bottom: 4px;
+    padding-left: 5px;
+    width: 137px;
+}
+
+#header .register a {
+    color: #CC0000;
+}
+
+#header .contacts {
+    border-top: 1px solid #FFFFFF;
+    clear: right;
+    color: #ADADAD;
+    float: right;
+    line-height: 20px;
+    margin-right: 17px;
+    padding-left: 5px;
+    width: 137px;
+}
+
+#header .contacts p a {
+    color: #ADADAD;
+}
+
+#hr_header {
+	background: url("images/bg_lt.gif") repeat-x 0px 10px;
+	width: 100%;
+	overflow: hidden;
+	padding-top: 15px;
+}
+
+
+#footer {
+    background: url("images/bg_footer.gif") repeat-x scroll 0 0 transparent;
+    float: left;
+    height: 130px;
+    line-height: 20px;
+    margin: 10px 0 0;
+    padding: 22px 0 0;
+    text-align: center;
+    width: 100%;
+}

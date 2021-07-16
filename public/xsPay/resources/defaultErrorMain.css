@@ -1,0 +1,22 @@
+#main {
+	margin: 24px auto;
+}
+
+#main .tabs {
+	background: url("images/bg_tabs.png") no-repeat scroll left
+		top transparent;
+	height: 34px;
+	padding: 0 25px;
+}
+
+.tabs .title {
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 34px;
+}
+
+#main .item-box {
+	height: 250px;
+	border:1px solid #d2d2d2;
+    padding: 17px 43px 17px 142px;
+}
