@@ -1,0 +1,307 @@
+---------------------------------------------------------------
+[ 2021-07-15T14:37:33+08:00 ] 113.119.63.193 GET www.gdddfkj.com/
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005258s ] mysql:host=localhost;port=8806;dbname=www_gdddfkj_com;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_navigation` [ RunTime:0.007987s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`name`,`url`,`value`,`data_type`,`is_new_window_open` FROM `s_navigation` WHERE  `nav_type` = 'header'  AND `is_show` = 1  AND `pid` = 0 ORDER BY `sort` [ RunTime:0.003845s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_goods_category` [ RunTime:0.002790s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`icon`,`name`,`vice_name`,`describe`,`bg_color`,`big_images`,`sort`,`is_home_recommended`,`seo_title`,`seo_keywords`,`seo_desc` FROM `s_goods_category` WHERE  `pid` = 0  AND `is_enable` = 1 ORDER BY `sort` ASC [ RunTime:0.000476s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`icon`,`name`,`vice_name`,`describe`,`bg_color`,`big_images`,`sort`,`is_home_recommended`,`seo_title`,`seo_keywords`,`seo_desc` FROM `s_goods_category` WHERE  `pid` = 2  AND `is_enable` = 1 ORDER BY `sort` ASC [ RunTime:0.000338s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`icon`,`name`,`vice_name`,`describe`,`bg_color`,`big_images`,`sort`,`is_home_recommended`,`seo_title`,`seo_keywords`,`seo_desc` FROM `s_goods_category` WHERE  `pid` IN (895,896,898,899,900,897)  AND `is_enable` = 1 ORDER BY `sort` ASC [ RunTime:0.000557s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`icon`,`name`,`vice_name`,`describe`,`bg_color`,`big_images`,`sort`,`is_home_recommended`,`seo_title`,`seo_keywords`,`seo_desc` FROM `s_goods_category` WHERE  `pid` = 304  AND `is_enable` = 1 ORDER BY `sort` ASC [ RunTime:0.000341s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`icon`,`name`,`vice_name`,`describe`,`bg_color`,`big_images`,`sort`,`is_home_recommended`,`seo_title`,`seo_keywords`,`seo_desc` FROM `s_goods_category` WHERE  `pid` IN (312,313,316,318,320,321)  AND `is_enable` = 1 ORDER BY `sort` ASC [ RunTime:0.000468s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_link` [ RunTime:0.001634s ]
+[ sql ] [ SQL ] SELECT * FROM `s_link` WHERE  `is_enable` = 1 ORDER BY `sort` ASC [ RunTime:0.000249s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_plugins` [ RunTime:0.002841s ]
+[ sql ] [ SQL ] SELECT `data` FROM `s_plugins` WHERE  `plugins` = 'expressforkdn' LIMIT 1 [ RunTime:0.000224s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_slide` [ RunTime:0.001644s ]
+[ sql ] [ SQL ] SELECT `name`,`images_url`,`event_value`,`event_type`,`bg_color` FROM `s_slide` WHERE  `platform` = 'pc'  AND `is_enable` = 1 ORDER BY `sort` ASC,`id` ASC [ RunTime:0.000343s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_app_home_nav` [ RunTime:0.003492s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`images_url`,`event_value`,`event_type`,`bg_color`,`is_need_login` FROM `s_app_home_nav` WHERE  `platform` = 'pc'  AND `is_enable` = 1 ORDER BY `sort` ASC [ RunTime:0.000316s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`icon`,`name`,`vice_name`,`describe`,`bg_color`,`big_images`,`sort`,`is_home_recommended`,`seo_title`,`seo_keywords`,`seo_desc` FROM `s_goods_category` WHERE  `pid` = 0  AND `is_home_recommended` = 1  AND `is_enable` = 1 ORDER BY `sort` ASC [ RunTime:0.000339s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`icon`,`name`,`vice_name`,`describe`,`bg_color`,`big_images`,`sort`,`is_home_recommended`,`seo_title`,`seo_keywords`,`seo_desc` FROM `s_goods_category` WHERE  `pid` = 2  AND `is_home_recommended` = 1  AND `is_enable` = 1 ORDER BY `sort` ASC [ RunTime:0.000367s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`icon`,`name`,`vice_name`,`describe`,`bg_color`,`big_images`,`sort`,`is_home_recommended`,`seo_title`,`seo_keywords`,`seo_desc` FROM `s_goods_category` WHERE  `pid` IN (895,896,898,899,900,897)  AND `is_home_recommended` = 1  AND `is_enable` = 1 ORDER BY `sort` ASC [ RunTime:0.000498s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`icon`,`name`,`vice_name`,`describe`,`bg_color`,`big_images`,`sort`,`is_home_recommended`,`seo_title`,`seo_keywords`,`seo_desc` FROM `s_goods_category` WHERE  `pid` = 304  AND `is_home_recommended` = 1  AND `is_enable` = 1 ORDER BY `sort` ASC [ RunTime:0.000427s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`icon`,`name`,`vice_name`,`describe`,`bg_color`,`big_images`,`sort`,`is_home_recommended`,`seo_title`,`seo_keywords`,`seo_desc` FROM `s_goods_category` WHERE  `pid` IN (312,313,316,318,320,321)  AND `is_home_recommended` = 1  AND `is_enable` = 1 ORDER BY `sort` ASC [ RunTime:0.000491s ]
+[ sql ] [ SQL ] SELECT `id` FROM `s_goods_category` WHERE  `pid` IN (2)  AND `is_enable` = 1 ORDER BY `sort` ASC [ RunTime:0.000264s ]
+[ sql ] [ SQL ] SELECT `id` FROM `s_goods_category` WHERE  `pid` IN (895,896,898,899,900,897)  AND `is_enable` = 1 ORDER BY `sort` ASC [ RunTime:0.000397s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_goods` [ RunTime:0.002880s ]
+[ sql ] [ SQL ] SELECT `g`.* FROM `s_goods` `g` INNER JOIN `s_goods_category_join` `gci` ON `g`.`id`=`gci`.`goods_id` WHERE  `gci`.`category_id` IN ('2','895','896','898','899','900','897')  AND `g`.`is_home_recommended` = '1'  AND `g`.`is_shelves` = '1' GROUP BY `g`.`id` ORDER BY `g`.`id` DESC LIMIT 0,8 [ RunTime:0.035381s ]
+[ sql ] [ SQL ] SELECT `id` FROM `s_goods_category` WHERE  `pid` IN (304)  AND `is_enable` = 1 ORDER BY `sort` ASC [ RunTime:0.000383s ]
+[ sql ] [ SQL ] SELECT `id` FROM `s_goods_category` WHERE  `pid` IN (312,313,316,318,320,321)  AND `is_enable` = 1 ORDER BY `sort` ASC [ RunTime:0.000415s ]
+[ sql ] [ SQL ] SELECT `g`.* FROM `s_goods` `g` INNER JOIN `s_goods_category_join` `gci` ON `g`.`id`=`gci`.`goods_id` WHERE  `gci`.`category_id` IN ('304','312','313','316','318','320','321')  AND `g`.`is_home_recommended` = '1'  AND `g`.`is_shelves` = '1' GROUP BY `g`.`id` ORDER BY `g`.`id` DESC LIMIT 0,8 [ RunTime:0.001330s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_article` [ RunTime:0.002679s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`title`,`a`.`title_color`,ac.name AS category_name FROM `s_article` `a` INNER JOIN `s_article_category` `ac` ON `a`.`article_category_id`=`ac`.`id` WHERE  `a`.`is_enable` = '1'  AND `a`.`is_home_recommended` = '1' ORDER BY `a`.`id` DESC LIMIT 0,9 [ RunTime:0.009104s ]
+---------------------------------------------------------------
+[ 2021-07-15T14:55:17+08:00 ] 113.119.63.193 GET www.gdddfkj.com/index.php?s=/index/article/index/id/28.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000431s ] mysql:host=localhost;port=8806;dbname=www_gdddfkj_com;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_navigation` [ RunTime:0.003521s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`name`,`url`,`value`,`data_type`,`is_new_window_open` FROM `s_navigation` WHERE  `nav_type` = 'header'  AND `is_show` = 1  AND `pid` = 0 ORDER BY `sort` [ RunTime:0.000546s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_link` [ RunTime:0.000627s ]
+[ sql ] [ SQL ] SELECT * FROM `s_link` WHERE  `is_enable` = 1 ORDER BY `sort` ASC [ RunTime:0.000292s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_plugins` [ RunTime:0.000590s ]
+[ sql ] [ SQL ] SELECT `data` FROM `s_plugins` WHERE  `plugins` = 'expressforkdn' LIMIT 1 [ RunTime:0.000241s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_article` [ RunTime:0.000509s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`title`,`a`.`title_color`,`a`.`jump_url`,`a`.`content`,`a`.`access_count`,`a`.`article_category_id`,`seo_title`,`seo_keywords`,`seo_desc`,`a`.`add_time` FROM `s_article` `a` INNER JOIN `s_article_category` `ac` ON `a`.`article_category_id`=`ac`.`id` WHERE  `a`.`is_enable` = '1'  AND `a`.`id` = '28' ORDER BY `a`.`id` DESC LIMIT 0,1 [ RunTime:0.000438s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_article_category` [ RunTime:0.000386s ]
+[ sql ] [ SQL ] SELECT `name` FROM `s_article_category` WHERE  `id` = 24 LIMIT 1 [ RunTime:0.000190s ]
+[ sql ] [ SQL ] UPDATE `s_article`  SET `access_count` = `access_count` + 1  WHERE  `id` = 28 [ RunTime:0.005660s ]
+[ sql ] [ SQL ] SELECT `id`,`name` FROM `s_article_category` WHERE  `is_enable` = 1 ORDER BY `id` ASC,`sort` ASC [ RunTime:0.000273s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`title_color` FROM `s_article` WHERE  `article_category_id` = 7  AND `is_enable` = 1 [ RunTime:0.000397s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`title_color` FROM `s_article` WHERE  `article_category_id` = 16  AND `is_enable` = 1 [ RunTime:0.000281s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`title_color` FROM `s_article` WHERE  `article_category_id` = 17  AND `is_enable` = 1 [ RunTime:0.000264s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`title_color` FROM `s_article` WHERE  `article_category_id` = 18  AND `is_enable` = 1 [ RunTime:0.000307s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`title_color` FROM `s_article` WHERE  `article_category_id` = 24  AND `is_enable` = 1 [ RunTime:0.000271s ]
+---------------------------------------------------------------
+[ 2021-07-15T14:55:25+08:00 ] 113.119.63.193 GET www.gdddfkj.com/index.php?s=/index/article/index/id/26.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000320s ] mysql:host=localhost;port=8806;dbname=www_gdddfkj_com;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_navigation` [ RunTime:0.000537s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`name`,`url`,`value`,`data_type`,`is_new_window_open` FROM `s_navigation` WHERE  `nav_type` = 'header'  AND `is_show` = 1  AND `pid` = 0 ORDER BY `sort` [ RunTime:0.000359s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_link` [ RunTime:0.000405s ]
+[ sql ] [ SQL ] SELECT * FROM `s_link` WHERE  `is_enable` = 1 ORDER BY `sort` ASC [ RunTime:0.000201s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_plugins` [ RunTime:0.000346s ]
+[ sql ] [ SQL ] SELECT `data` FROM `s_plugins` WHERE  `plugins` = 'expressforkdn' LIMIT 1 [ RunTime:0.000209s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_article` [ RunTime:0.000541s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`title`,`a`.`title_color`,`a`.`jump_url`,`a`.`content`,`a`.`access_count`,`a`.`article_category_id`,`seo_title`,`seo_keywords`,`seo_desc`,`a`.`add_time` FROM `s_article` `a` INNER JOIN `s_article_category` `ac` ON `a`.`article_category_id`=`ac`.`id` WHERE  `a`.`is_enable` = '1'  AND `a`.`id` = '26' ORDER BY `a`.`id` DESC LIMIT 0,1 [ RunTime:0.000386s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_article_category` [ RunTime:0.000401s ]
+[ sql ] [ SQL ] SELECT `name` FROM `s_article_category` WHERE  `id` = 24 LIMIT 1 [ RunTime:0.000175s ]
+[ sql ] [ SQL ] UPDATE `s_article`  SET `access_count` = `access_count` + 1  WHERE  `id` = 26 [ RunTime:0.002975s ]
+[ sql ] [ SQL ] SELECT `id`,`name` FROM `s_article_category` WHERE  `is_enable` = 1 ORDER BY `id` ASC,`sort` ASC [ RunTime:0.000235s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`title_color` FROM `s_article` WHERE  `article_category_id` = 7  AND `is_enable` = 1 [ RunTime:0.000319s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`title_color` FROM `s_article` WHERE  `article_category_id` = 16  AND `is_enable` = 1 [ RunTime:0.000271s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`title_color` FROM `s_article` WHERE  `article_category_id` = 17  AND `is_enable` = 1 [ RunTime:0.000274s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`title_color` FROM `s_article` WHERE  `article_category_id` = 18  AND `is_enable` = 1 [ RunTime:0.000294s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`title_color` FROM `s_article` WHERE  `article_category_id` = 24  AND `is_enable` = 1 [ RunTime:0.000303s ]
+---------------------------------------------------------------
+[ 2021-07-15T14:55:30+08:00 ] 113.119.63.193 GET www.gdddfkj.com/index.php?s=/index/article/index/id/25.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000392s ] mysql:host=localhost;port=8806;dbname=www_gdddfkj_com;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_navigation` [ RunTime:0.000742s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`name`,`url`,`value`,`data_type`,`is_new_window_open` FROM `s_navigation` WHERE  `nav_type` = 'header'  AND `is_show` = 1  AND `pid` = 0 ORDER BY `sort` [ RunTime:0.000445s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_link` [ RunTime:0.000531s ]
+[ sql ] [ SQL ] SELECT * FROM `s_link` WHERE  `is_enable` = 1 ORDER BY `sort` ASC [ RunTime:0.000248s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_plugins` [ RunTime:0.000461s ]
+[ sql ] [ SQL ] SELECT `data` FROM `s_plugins` WHERE  `plugins` = 'expressforkdn' LIMIT 1 [ RunTime:0.000194s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_article` [ RunTime:0.000550s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`title`,`a`.`title_color`,`a`.`jump_url`,`a`.`content`,`a`.`access_count`,`a`.`article_category_id`,`seo_title`,`seo_keywords`,`seo_desc`,`a`.`add_time` FROM `s_article` `a` INNER JOIN `s_article_category` `ac` ON `a`.`article_category_id`=`ac`.`id` WHERE  `a`.`is_enable` = '1'  AND `a`.`id` = '25' ORDER BY `a`.`id` DESC LIMIT 0,1 [ RunTime:0.000354s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_article_category` [ RunTime:0.000399s ]
+[ sql ] [ SQL ] SELECT `name` FROM `s_article_category` WHERE  `id` = 18 LIMIT 1 [ RunTime:0.000164s ]
+[ sql ] [ SQL ] UPDATE `s_article`  SET `access_count` = `access_count` + 1  WHERE  `id` = 25 [ RunTime:0.002919s ]
+[ sql ] [ SQL ] SELECT `id`,`name` FROM `s_article_category` WHERE  `is_enable` = 1 ORDER BY `id` ASC,`sort` ASC [ RunTime:0.000237s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`title_color` FROM `s_article` WHERE  `article_category_id` = 7  AND `is_enable` = 1 [ RunTime:0.000364s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`title_color` FROM `s_article` WHERE  `article_category_id` = 16  AND `is_enable` = 1 [ RunTime:0.000276s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`title_color` FROM `s_article` WHERE  `article_category_id` = 17  AND `is_enable` = 1 [ RunTime:0.000261s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`title_color` FROM `s_article` WHERE  `article_category_id` = 18  AND `is_enable` = 1 [ RunTime:0.000286s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`title_color` FROM `s_article` WHERE  `article_category_id` = 24  AND `is_enable` = 1 [ RunTime:0.000284s ]
+---------------------------------------------------------------
+[ 2021-07-15T14:55:33+08:00 ] 113.119.63.193 GET www.gdddfkj.com/index.php?s=/index/article/index/id/23.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000399s ] mysql:host=localhost;port=8806;dbname=www_gdddfkj_com;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_navigation` [ RunTime:0.000750s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`name`,`url`,`value`,`data_type`,`is_new_window_open` FROM `s_navigation` WHERE  `nav_type` = 'header'  AND `is_show` = 1  AND `pid` = 0 ORDER BY `sort` [ RunTime:0.000471s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_link` [ RunTime:0.000684s ]
+[ sql ] [ SQL ] SELECT * FROM `s_link` WHERE  `is_enable` = 1 ORDER BY `sort` ASC [ RunTime:0.000276s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_plugins` [ RunTime:0.000439s ]
+[ sql ] [ SQL ] SELECT `data` FROM `s_plugins` WHERE  `plugins` = 'expressforkdn' LIMIT 1 [ RunTime:0.000199s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_article` [ RunTime:0.000985s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`title`,`a`.`title_color`,`a`.`jump_url`,`a`.`content`,`a`.`access_count`,`a`.`article_category_id`,`seo_title`,`seo_keywords`,`seo_desc`,`a`.`add_time` FROM `s_article` `a` INNER JOIN `s_article_category` `ac` ON `a`.`article_category_id`=`ac`.`id` WHERE  `a`.`is_enable` = '1'  AND `a`.`id` = '23' ORDER BY `a`.`id` DESC LIMIT 0,1 [ RunTime:0.000362s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_article_category` [ RunTime:0.000396s ]
+[ sql ] [ SQL ] SELECT `name` FROM `s_article_category` WHERE  `id` = 18 LIMIT 1 [ RunTime:0.000174s ]
+[ sql ] [ SQL ] UPDATE `s_article`  SET `access_count` = `access_count` + 1  WHERE  `id` = 23 [ RunTime:0.004138s ]
+[ sql ] [ SQL ] SELECT `id`,`name` FROM `s_article_category` WHERE  `is_enable` = 1 ORDER BY `id` ASC,`sort` ASC [ RunTime:0.000271s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`title_color` FROM `s_article` WHERE  `article_category_id` = 7  AND `is_enable` = 1 [ RunTime:0.000982s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`title_color` FROM `s_article` WHERE  `article_category_id` = 16  AND `is_enable` = 1 [ RunTime:0.000291s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`title_color` FROM `s_article` WHERE  `article_category_id` = 17  AND `is_enable` = 1 [ RunTime:0.000252s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`title_color` FROM `s_article` WHERE  `article_category_id` = 18  AND `is_enable` = 1 [ RunTime:0.000287s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`title_color` FROM `s_article` WHERE  `article_category_id` = 24  AND `is_enable` = 1 [ RunTime:0.000278s ]
+---------------------------------------------------------------
+[ 2021-07-15T14:55:36+08:00 ] 113.119.63.193 GET www.gdddfkj.com/index.php?s=/index/article/index/id/22.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000393s ] mysql:host=localhost;port=8806;dbname=www_gdddfkj_com;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_navigation` [ RunTime:0.000731s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`name`,`url`,`value`,`data_type`,`is_new_window_open` FROM `s_navigation` WHERE  `nav_type` = 'header'  AND `is_show` = 1  AND `pid` = 0 ORDER BY `sort` [ RunTime:0.000475s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_link` [ RunTime:0.000525s ]
+[ sql ] [ SQL ] SELECT * FROM `s_link` WHERE  `is_enable` = 1 ORDER BY `sort` ASC [ RunTime:0.000251s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_plugins` [ RunTime:0.000436s ]
+[ sql ] [ SQL ] SELECT `data` FROM `s_plugins` WHERE  `plugins` = 'expressforkdn' LIMIT 1 [ RunTime:0.000215s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_article` [ RunTime:0.000547s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`title`,`a`.`title_color`,`a`.`jump_url`,`a`.`content`,`a`.`access_count`,`a`.`article_category_id`,`seo_title`,`seo_keywords`,`seo_desc`,`a`.`add_time` FROM `s_article` `a` INNER JOIN `s_article_category` `ac` ON `a`.`article_category_id`=`ac`.`id` WHERE  `a`.`is_enable` = '1'  AND `a`.`id` = '22' ORDER BY `a`.`id` DESC LIMIT 0,1 [ RunTime:0.000360s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_article_category` [ RunTime:0.000392s ]
+[ sql ] [ SQL ] SELECT `name` FROM `s_article_category` WHERE  `id` = 18 LIMIT 1 [ RunTime:0.000165s ]
+[ sql ] [ SQL ] UPDATE `s_article`  SET `access_count` = `access_count` + 1  WHERE  `id` = 22 [ RunTime:0.003141s ]
+[ sql ] [ SQL ] SELECT `id`,`name` FROM `s_article_category` WHERE  `is_enable` = 1 ORDER BY `id` ASC,`sort` ASC [ RunTime:0.000269s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`title_color` FROM `s_article` WHERE  `article_category_id` = 7  AND `is_enable` = 1 [ RunTime:0.000300s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`title_color` FROM `s_article` WHERE  `article_category_id` = 16  AND `is_enable` = 1 [ RunTime:0.000269s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`title_color` FROM `s_article` WHERE  `article_category_id` = 17  AND `is_enable` = 1 [ RunTime:0.000277s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`title_color` FROM `s_article` WHERE  `article_category_id` = 18  AND `is_enable` = 1 [ RunTime:0.000286s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`title_color` FROM `s_article` WHERE  `article_category_id` = 24  AND `is_enable` = 1 [ RunTime:0.000280s ]
+---------------------------------------------------------------
+[ 2021-07-15T14:55:40+08:00 ] 113.119.63.193 GET www.gdddfkj.com/index.php?s=/index/goods/index/id/104.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000359s ] mysql:host=localhost;port=8806;dbname=www_gdddfkj_com;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_navigation` [ RunTime:0.000756s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`name`,`url`,`value`,`data_type`,`is_new_window_open` FROM `s_navigation` WHERE  `nav_type` = 'header'  AND `is_show` = 1  AND `pid` = 0 ORDER BY `sort` [ RunTime:0.002391s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_link` [ RunTime:0.002244s ]
+[ sql ] [ SQL ] SELECT * FROM `s_link` WHERE  `is_enable` = 1 ORDER BY `sort` ASC [ RunTime:0.000244s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_plugins` [ RunTime:0.000505s ]
+[ sql ] [ SQL ] SELECT `data` FROM `s_plugins` WHERE  `plugins` = 'expressforkdn' LIMIT 1 [ RunTime:0.000305s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_goods` [ RunTime:0.000729s ]
+[ sql ] [ SQL ] SELECT * FROM `s_goods` WHERE  `id` = 104  AND `is_delete_time` = 0 ORDER BY `id` DESC LIMIT 0,10 [ RunTime:0.003108s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_goods_photo` [ RunTime:0.002814s ]
+[ sql ] [ SQL ] SELECT * FROM `s_goods_photo` WHERE  `goods_id` = 104  AND `is_show` = 1 ORDER BY `sort` ASC [ RunTime:0.001113s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_goods_spec_type` [ RunTime:0.004178s ]
+[ sql ] [ SQL ] SELECT * FROM `s_goods_spec_type` WHERE  `goods_id` = 104 ORDER BY `id` ASC [ RunTime:0.000769s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_goods_comments` [ RunTime:0.002753s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_goods_comments` WHERE  `goods_id` = 104  AND `is_show` = 1 LIMIT 1 [ RunTime:0.000268s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_goods_favor` [ RunTime:0.001492s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_goods_favor` `f` INNER JOIN `s_goods` `g` ON `g`.`id`=`f`.`goods_id` WHERE  `goods_id` = 104 LIMIT 1 [ RunTime:0.000251s ]
+[ sql ] [ SQL ] SELECT `rating`,count(*) as count FROM `s_goods_comments` WHERE  `goods_id` = 104  AND `rating` > 0 GROUP BY `rating` [ RunTime:0.000309s ]
+[ sql ] [ SQL ] SELECT AVG(`rating`) AS tp_avg FROM `s_goods_comments` WHERE  `goods_id` = 104  AND `rating` > 0 LIMIT 1 [ RunTime:0.000706s ]
+[ sql ] [ SQL ] UPDATE `s_goods`  SET `access_count` = `access_count` + 1  WHERE  `id` = 104 [ RunTime:0.003070s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`title_color`,`price`,`images` FROM `s_goods` WHERE  `is_delete_time` = 0  AND `is_shelves` = 1 ORDER BY `access_count` DESC LIMIT 0,10 [ RunTime:0.000434s ]
+[ sql ] [ SQL ] SELECT `id`,`title`,`title_color`,`price`,`images`,`home_recommended_images` FROM `s_goods` WHERE  `is_delete_time` = 0  AND `is_shelves` = 1  AND `is_home_recommended` = 1 ORDER BY `sales_count` DESC LIMIT 0,16 [ RunTime:0.004546s ]
+---------------------------------------------------------------
+[ 2021-07-15T14:55:41+08:00 ] 113.119.63.193 GET www.gdddfkj.com/index.php?s=/index/qrcode/index/content/aHR0cDovL3d3dy5nZGRkZmtqLmNvbS9pbmRleC5waHA%252Fcz0vaW5kZXgvZ29vZHMvaW5kZXgvaWQvMTA0Lmh0bWw%253D.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.009754s ] mysql:host=localhost;port=8806;dbname=www_gdddfkj_com;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_navigation` [ RunTime:0.003488s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`name`,`url`,`value`,`data_type`,`is_new_window_open` FROM `s_navigation` WHERE  `nav_type` = 'header'  AND `is_show` = 1  AND `pid` = 0 ORDER BY `sort` [ RunTime:0.000505s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_link` [ RunTime:0.000527s ]
+[ sql ] [ SQL ] SELECT * FROM `s_link` WHERE  `is_enable` = 1 ORDER BY `sort` ASC [ RunTime:0.000229s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_plugins` [ RunTime:0.000538s ]
+[ sql ] [ SQL ] SELECT `data` FROM `s_plugins` WHERE  `plugins` = 'expressforkdn' LIMIT 1 [ RunTime:0.000198s ]
+---------------------------------------------------------------
+[ 2021-07-15T14:55:46+08:00 ] 113.119.63.193 POST www.gdddfkj.com/index.php?s=/index/goods/comments.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000410s ] mysql:host=localhost;port=8806;dbname=www_gdddfkj_com;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_navigation` [ RunTime:0.000726s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`name`,`url`,`value`,`data_type`,`is_new_window_open` FROM `s_navigation` WHERE  `nav_type` = 'header'  AND `is_show` = 1  AND `pid` = 0 ORDER BY `sort` [ RunTime:0.000432s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_link` [ RunTime:0.000518s ]
+[ sql ] [ SQL ] SELECT * FROM `s_link` WHERE  `is_enable` = 1 ORDER BY `sort` ASC [ RunTime:0.000245s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_plugins` [ RunTime:0.000436s ]
+[ sql ] [ SQL ] SELECT `data` FROM `s_plugins` WHERE  `plugins` = 'expressforkdn' LIMIT 1 [ RunTime:0.000214s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_goods_comments` [ RunTime:0.000502s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `s_goods_comments` WHERE  `goods_id` = 104  AND `is_show` = 1 LIMIT 1 [ RunTime:0.000232s ]
+[ sql ] [ SQL ] SELECT * FROM `s_goods_comments` WHERE  `goods_id` = 104  AND `is_show` = 1 ORDER BY `id` DESC LIMIT 0,10 [ RunTime:0.000234s ]
+---------------------------------------------------------------
+[ 2021-07-15T14:56:40+08:00 ] 113.119.63.193 POST www.gdddfkj.com/index.php?s=/index/search/index.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000473s ] mysql:host=localhost;port=8806;dbname=www_gdddfkj_com;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_navigation` [ RunTime:0.000763s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`name`,`url`,`value`,`data_type`,`is_new_window_open` FROM `s_navigation` WHERE  `nav_type` = 'header'  AND `is_show` = 1  AND `pid` = 0 ORDER BY `sort` [ RunTime:0.000461s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_link` [ RunTime:0.000582s ]
+[ sql ] [ SQL ] SELECT * FROM `s_link` WHERE  `is_enable` = 1 ORDER BY `sort` ASC [ RunTime:0.000282s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_plugins` [ RunTime:0.000623s ]
+[ sql ] [ SQL ] SELECT `data` FROM `s_plugins` WHERE  `plugins` = 'expressforkdn' LIMIT 1 [ RunTime:0.000230s ]
+---------------------------------------------------------------
+[ 2021-07-15T14:56:40+08:00 ] 113.119.63.193 GET www.gdddfkj.com/index.php?s=/index/search/index/wd/9E48285E0B495E4AA96E69FA13938303.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000508s ] mysql:host=localhost;port=8806;dbname=www_gdddfkj_com;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_navigation` [ RunTime:0.000659s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`name`,`url`,`value`,`data_type`,`is_new_window_open` FROM `s_navigation` WHERE  `nav_type` = 'header'  AND `is_show` = 1  AND `pid` = 0 ORDER BY `sort` [ RunTime:0.000406s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_link` [ RunTime:0.000547s ]
+[ sql ] [ SQL ] SELECT * FROM `s_link` WHERE  `is_enable` = 1 ORDER BY `sort` ASC [ RunTime:0.000247s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_plugins` [ RunTime:0.000453s ]
+[ sql ] [ SQL ] SELECT `data` FROM `s_plugins` WHERE  `plugins` = 'expressforkdn' LIMIT 1 [ RunTime:0.000202s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_goods` [ RunTime:0.000705s ]
+[ sql ] [ SQL ] SELECT `brand_id` FROM `s_goods` WHERE  `title` LIKE '%鄂尔多斯1980%' GROUP BY `brand_id` [ RunTime:0.005556s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_brand` [ RunTime:0.003003s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`logo`,`website_url` FROM `s_brand` WHERE  `is_enable` = 1  AND `id` IN (0) [ RunTime:0.000202s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_goods_category` [ RunTime:0.000652s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`icon`,`name`,`vice_name`,`describe`,`bg_color`,`big_images`,`sort`,`is_home_recommended`,`seo_title`,`seo_keywords`,`seo_desc` FROM `s_goods_category` WHERE  `pid` = 0  AND `is_enable` = 1 ORDER BY `sort` ASC [ RunTime:0.000464s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_screening_price` [ RunTime:0.001977s ]
+[ sql ] [ SQL ] SELECT `id`,`name` FROM `s_screening_price` WHERE  `is_enable` = 1 ORDER BY `sort` ASC [ RunTime:0.000288s ]
+---------------------------------------------------------------
+[ 2021-07-15T14:56:40+08:00 ] 113.119.63.193 POST www.gdddfkj.com/index.php?s=/index/search/goodslist.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000354s ] mysql:host=localhost;port=8806;dbname=www_gdddfkj_com;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_navigation` [ RunTime:0.000729s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`name`,`url`,`value`,`data_type`,`is_new_window_open` FROM `s_navigation` WHERE  `nav_type` = 'header'  AND `is_show` = 1  AND `pid` = 0 ORDER BY `sort` [ RunTime:0.000431s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_link` [ RunTime:0.000608s ]
+[ sql ] [ SQL ] SELECT * FROM `s_link` WHERE  `is_enable` = 1 ORDER BY `sort` ASC [ RunTime:0.000266s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_plugins` [ RunTime:0.000443s ]
+[ sql ] [ SQL ] SELECT `data` FROM `s_plugins` WHERE  `plugins` = 'expressforkdn' LIMIT 1 [ RunTime:0.000203s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_goods` [ RunTime:0.000689s ]
+[ sql ] [ SQL ] SELECT COUNT(DISTINCT `g`.`id`) AS tp_count FROM `s_goods` `g` INNER JOIN `s_goods_category_join` `gci` ON `g`.`id`=`gci`.`goods_id` WHERE  `g`.`is_delete_time` = '0'  AND `g`.`is_shelves` = '1'  AND ( `g`.`title` LIKE '%鄂尔多斯1980%' OR `g`.`model` LIKE '%鄂尔多斯1980%' OR `g`.`simple_desc` LIKE '%鄂尔多斯1980%' OR `g`.`seo_title` LIKE '%鄂尔多斯1980%' OR `g`.`seo_keywords` LIKE '%鄂尔多斯1980%' OR `g`.`seo_keywords` LIKE '%鄂尔多斯1980%' ) LIMIT 1 [ RunTime:0.001659s ]
+[ sql ] [ SQL ] SELECT `g`.* FROM `s_goods` `g` INNER JOIN `s_goods_category_join` `gci` ON `g`.`id`=`gci`.`goods_id` WHERE  `g`.`is_delete_time` = '0'  AND `g`.`is_shelves` = '1'  AND ( `g`.`title` LIKE '%鄂尔多斯1980%' OR `g`.`model` LIKE '%鄂尔多斯1980%' OR `g`.`simple_desc` LIKE '%鄂尔多斯1980%' OR `g`.`seo_title` LIKE '%鄂尔多斯1980%' OR `g`.`seo_keywords` LIKE '%鄂尔多斯1980%' OR `g`.`seo_keywords` LIKE '%鄂尔多斯1980%' ) GROUP BY `g`.`id` ORDER BY `g`.`access_count` DESC,`g`.`sales_count` DESC LIMIT 0,20 [ RunTime:0.002711s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_search_history` [ RunTime:0.002707s ]
+[ sql ] [ SQL ] INSERT INTO `s_search_history` (`user_id` , `brand_id` , `category_id` , `keywords` , `order_by_field` , `order_by_type` , `screening_price` , `ymd` , `add_time`) VALUES (0 , 0 , 0 , '鄂尔多斯1980' , 'default' , 'asc' , '0-0' , 20210715 , 1626332200) [ RunTime:0.003323s ]
+---------------------------------------------------------------
+[ 2021-07-15T14:56:43+08:00 ] 113.119.63.193 POST www.gdddfkj.com/index.php?s=/index/search/index.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000399s ] mysql:host=localhost;port=8806;dbname=www_gdddfkj_com;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_navigation` [ RunTime:0.000703s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`name`,`url`,`value`,`data_type`,`is_new_window_open` FROM `s_navigation` WHERE  `nav_type` = 'header'  AND `is_show` = 1  AND `pid` = 0 ORDER BY `sort` [ RunTime:0.000439s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_link` [ RunTime:0.000512s ]
+[ sql ] [ SQL ] SELECT * FROM `s_link` WHERE  `is_enable` = 1 ORDER BY `sort` ASC [ RunTime:0.000241s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_plugins` [ RunTime:0.000417s ]
+[ sql ] [ SQL ] SELECT `data` FROM `s_plugins` WHERE  `plugins` = 'expressforkdn' LIMIT 1 [ RunTime:0.000189s ]
+---------------------------------------------------------------
+[ 2021-07-15T14:56:43+08:00 ] 113.119.63.193 GET www.gdddfkj.com/index.php?s=/index/search/index/wd/9E48285E0B495E4AA96E69FA13938303.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000423s ] mysql:host=localhost;port=8806;dbname=www_gdddfkj_com;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_navigation` [ RunTime:0.000589s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`name`,`url`,`value`,`data_type`,`is_new_window_open` FROM `s_navigation` WHERE  `nav_type` = 'header'  AND `is_show` = 1  AND `pid` = 0 ORDER BY `sort` [ RunTime:0.000418s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_link` [ RunTime:0.000452s ]
+[ sql ] [ SQL ] SELECT * FROM `s_link` WHERE  `is_enable` = 1 ORDER BY `sort` ASC [ RunTime:0.000249s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_plugins` [ RunTime:0.000395s ]
+[ sql ] [ SQL ] SELECT `data` FROM `s_plugins` WHERE  `plugins` = 'expressforkdn' LIMIT 1 [ RunTime:0.000192s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_goods` [ RunTime:0.000751s ]
+[ sql ] [ SQL ] SELECT `brand_id` FROM `s_goods` WHERE  `title` LIKE '%鄂尔多斯1980%' GROUP BY `brand_id` [ RunTime:0.000567s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_brand` [ RunTime:0.000470s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`logo`,`website_url` FROM `s_brand` WHERE  `is_enable` = 1  AND `id` IN (0) [ RunTime:0.000194s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_goods_category` [ RunTime:0.000486s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`icon`,`name`,`vice_name`,`describe`,`bg_color`,`big_images`,`sort`,`is_home_recommended`,`seo_title`,`seo_keywords`,`seo_desc` FROM `s_goods_category` WHERE  `pid` = 0  AND `is_enable` = 1 ORDER BY `sort` ASC [ RunTime:0.000364s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_screening_price` [ RunTime:0.000417s ]
+[ sql ] [ SQL ] SELECT `id`,`name` FROM `s_screening_price` WHERE  `is_enable` = 1 ORDER BY `sort` ASC [ RunTime:0.000259s ]
+---------------------------------------------------------------
+[ 2021-07-15T14:56:43+08:00 ] 113.119.63.193 POST www.gdddfkj.com/index.php?s=/index/search/goodslist.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000510s ] mysql:host=localhost;port=8806;dbname=www_gdddfkj_com;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_navigation` [ RunTime:0.000706s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`name`,`url`,`value`,`data_type`,`is_new_window_open` FROM `s_navigation` WHERE  `nav_type` = 'header'  AND `is_show` = 1  AND `pid` = 0 ORDER BY `sort` [ RunTime:0.000440s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_link` [ RunTime:0.000546s ]
+[ sql ] [ SQL ] SELECT * FROM `s_link` WHERE  `is_enable` = 1 ORDER BY `sort` ASC [ RunTime:0.000272s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_plugins` [ RunTime:0.000464s ]
+[ sql ] [ SQL ] SELECT `data` FROM `s_plugins` WHERE  `plugins` = 'expressforkdn' LIMIT 1 [ RunTime:0.000195s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_goods` [ RunTime:0.000834s ]
+[ sql ] [ SQL ] SELECT COUNT(DISTINCT `g`.`id`) AS tp_count FROM `s_goods` `g` INNER JOIN `s_goods_category_join` `gci` ON `g`.`id`=`gci`.`goods_id` WHERE  `g`.`is_delete_time` = '0'  AND `g`.`is_shelves` = '1'  AND ( `g`.`title` LIKE '%鄂尔多斯1980%' OR `g`.`model` LIKE '%鄂尔多斯1980%' OR `g`.`simple_desc` LIKE '%鄂尔多斯1980%' OR `g`.`seo_title` LIKE '%鄂尔多斯1980%' OR `g`.`seo_keywords` LIKE '%鄂尔多斯1980%' OR `g`.`seo_keywords` LIKE '%鄂尔多斯1980%' ) LIMIT 1 [ RunTime:0.001429s ]
+[ sql ] [ SQL ] SELECT `g`.* FROM `s_goods` `g` INNER JOIN `s_goods_category_join` `gci` ON `g`.`id`=`gci`.`goods_id` WHERE  `g`.`is_delete_time` = '0'  AND `g`.`is_shelves` = '1'  AND ( `g`.`title` LIKE '%鄂尔多斯1980%' OR `g`.`model` LIKE '%鄂尔多斯1980%' OR `g`.`simple_desc` LIKE '%鄂尔多斯1980%' OR `g`.`seo_title` LIKE '%鄂尔多斯1980%' OR `g`.`seo_keywords` LIKE '%鄂尔多斯1980%' OR `g`.`seo_keywords` LIKE '%鄂尔多斯1980%' ) GROUP BY `g`.`id` ORDER BY `g`.`access_count` DESC,`g`.`sales_count` DESC LIMIT 0,20 [ RunTime:0.002462s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_search_history` [ RunTime:0.000503s ]
+[ sql ] [ SQL ] INSERT INTO `s_search_history` (`user_id` , `brand_id` , `category_id` , `keywords` , `order_by_field` , `order_by_type` , `screening_price` , `ymd` , `add_time`) VALUES (0 , 0 , 0 , '鄂尔多斯1980' , 'default' , 'asc' , '0-0' , 20210715 , 1626332203) [ RunTime:0.003037s ]
+---------------------------------------------------------------
+[ 2021-07-15T14:56:49+08:00 ] 113.119.63.193 GET www.gdddfkj.com/
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000567s ] mysql:host=localhost;port=8806;dbname=www_gdddfkj_com;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_navigation` [ RunTime:0.000756s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`name`,`url`,`value`,`data_type`,`is_new_window_open` FROM `s_navigation` WHERE  `nav_type` = 'header'  AND `is_show` = 1  AND `pid` = 0 ORDER BY `sort` [ RunTime:0.000460s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_link` [ RunTime:0.000521s ]
+[ sql ] [ SQL ] SELECT * FROM `s_link` WHERE  `is_enable` = 1 ORDER BY `sort` ASC [ RunTime:0.000244s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_plugins` [ RunTime:0.000467s ]
+[ sql ] [ SQL ] SELECT `data` FROM `s_plugins` WHERE  `plugins` = 'expressforkdn' LIMIT 1 [ RunTime:0.000191s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_app_home_nav` [ RunTime:0.000689s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`images_url`,`event_value`,`event_type`,`bg_color`,`is_need_login` FROM `s_app_home_nav` WHERE  `platform` = 'pc'  AND `is_enable` = 1 ORDER BY `sort` ASC [ RunTime:0.000345s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_article` [ RunTime:0.000505s ]
+[ sql ] [ SQL ] SELECT `a`.`id`,`a`.`title`,`a`.`title_color`,ac.name AS category_name FROM `s_article` `a` INNER JOIN `s_article_category` `ac` ON `a`.`article_category_id`=`ac`.`id` WHERE  `a`.`is_enable` = '1'  AND `a`.`is_home_recommended` = '1' ORDER BY `a`.`id` DESC LIMIT 0,9 [ RunTime:0.000453s ]
+---------------------------------------------------------------
+[ 2021-07-15T14:56:52+08:00 ] 113.119.63.193 GET www.gdddfkj.com/index.php?s=/index/user/modallogininfo.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000605s ] mysql:host=localhost;port=8806;dbname=www_gdddfkj_com;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_navigation` [ RunTime:0.000808s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`name`,`url`,`value`,`data_type`,`is_new_window_open` FROM `s_navigation` WHERE  `nav_type` = 'header'  AND `is_show` = 1  AND `pid` = 0 ORDER BY `sort` [ RunTime:0.000476s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_link` [ RunTime:0.000514s ]
+[ sql ] [ SQL ] SELECT * FROM `s_link` WHERE  `is_enable` = 1 ORDER BY `sort` ASC [ RunTime:0.000280s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_plugins` [ RunTime:0.000436s ]
+[ sql ] [ SQL ] SELECT `data` FROM `s_plugins` WHERE  `plugins` = 'expressforkdn' LIMIT 1 [ RunTime:0.000198s ]
+---------------------------------------------------------------
+[ 2021-07-15T14:56:52+08:00 ] 113.119.63.193 GET www.gdddfkj.com/index.php?s=/index/user/userverifyentry/type/login.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000429s ] mysql:host=localhost;port=8806;dbname=www_gdddfkj_com;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_navigation` [ RunTime:0.000688s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`name`,`url`,`value`,`data_type`,`is_new_window_open` FROM `s_navigation` WHERE  `nav_type` = 'header'  AND `is_show` = 1  AND `pid` = 0 ORDER BY `sort` [ RunTime:0.000416s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_link` [ RunTime:0.000552s ]
+[ sql ] [ SQL ] SELECT * FROM `s_link` WHERE  `is_enable` = 1 ORDER BY `sort` ASC [ RunTime:0.000281s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_plugins` [ RunTime:0.000450s ]
+[ sql ] [ SQL ] SELECT `data` FROM `s_plugins` WHERE  `plugins` = 'expressforkdn' LIMIT 1 [ RunTime:0.000211s ]
+---------------------------------------------------------------
+[ 2021-07-15T14:56:55+08:00 ] 113.119.63.193 GET www.gdddfkj.com/index.php?s=/index/user/userverifyentry/type/login.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000390s ] mysql:host=localhost;port=8806;dbname=www_gdddfkj_com;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_navigation` [ RunTime:0.000694s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`name`,`url`,`value`,`data_type`,`is_new_window_open` FROM `s_navigation` WHERE  `nav_type` = 'header'  AND `is_show` = 1  AND `pid` = 0 ORDER BY `sort` [ RunTime:0.000452s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_link` [ RunTime:0.001446s ]
+[ sql ] [ SQL ] SELECT * FROM `s_link` WHERE  `is_enable` = 1 ORDER BY `sort` ASC [ RunTime:0.000281s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_plugins` [ RunTime:0.000492s ]
+[ sql ] [ SQL ] SELECT `data` FROM `s_plugins` WHERE  `plugins` = 'expressforkdn' LIMIT 1 [ RunTime:0.000194s ]
+---------------------------------------------------------------
+[ 2021-07-15T14:56:56+08:00 ] 113.119.63.193 GET www.gdddfkj.com/index.php?s=/index/user/userverifyentry/type/login.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001509s ] mysql:host=localhost;port=8806;dbname=www_gdddfkj_com;charset=utf8mb4
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_navigation` [ RunTime:0.000673s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`name`,`url`,`value`,`data_type`,`is_new_window_open` FROM `s_navigation` WHERE  `nav_type` = 'header'  AND `is_show` = 1  AND `pid` = 0 ORDER BY `sort` [ RunTime:0.000461s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_link` [ RunTime:0.001561s ]
+[ sql ] [ SQL ] SELECT * FROM `s_link` WHERE  `is_enable` = 1 ORDER BY `sort` ASC [ RunTime:0.000300s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `s_plugins` [ RunTime:0.000405s ]
+[ sql ] [ SQL ] SELECT `data` FROM `s_plugins` WHERE  `plugins` = 'expressforkdn' LIMIT 1 [ RunTime:0.000202s ]

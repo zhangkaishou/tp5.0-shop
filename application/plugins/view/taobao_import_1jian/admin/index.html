@@ -1,0 +1,257 @@
+{{include file="public/header" /}}
+
+<!-- right content start  -->
+<div class="content-right">
+    <div class="content">
+        <legend>
+            <span class="fs-16">批量导入淘宝/阿里巴巴数据({{$OriginalConfig.version}})</span>
+            <span><?php
+       
+            
+if(version_compare($OriginalConfig["version"],$data["VersionNew"],'<') )
+{
+echo $data["version_msg"];
+
+}
+            
+            ?></span>
+            <a href="{{:MyUrl('admin/pluginsadmin/index')}}" class="fr fs-14 m-t-5 am-icon-mail-reply"> 返回</a>
+        </legend>
+
+        <div class="membershiplevel-content">
+            <!-- 基础数据 -->
+            <div class="am-panel am-panel-secondary">
+                <div class="am-panel-hd">
+                    <span class="am-panel-title">说明：此插件只能在服务器环境使用，本地无法正常上传,强烈建议把图片视频分离到oss或者七牛，网站访问速度提升明显。</span>
+                    <a class="am-fr" style="display:none"
+                        href="{{:PluginsAdminUrl('taobao_import_1jian', 'admin', 'saveinfo')}}">编辑</a>
+                </div>
+                <div class="am-panel-bd">
+                    <div class="items">
+                        <label>剩余可导入淘宝商品数量: <span class="am-badge am-badge-success am-round">
+                                {{if isset($data['RemainUploadNum'] )}}
+                                  {{if $data['RemainUploadNum']>100000 }}
+                                  无限
+                                  {{else}}
+                                {{:$data['RemainUploadNum']}}
+                                  {{/if}}
+                                {{else /}}
+                                未知
+                                {{/if}}
+                                条
+                            </span>   </label>
+                        <div>
+
+                         
+
+                            <form class="layui-form" id="ToPayForm" target="_blank" name="DataForm" method="POST"
+                                action="http://pay.1jian.vip/alipay/pagepay/pagepay.php">
+                                <select id="RenewalNum" name="RenewalNum">
+                                   <option value="200|18">200条(18元)</option>
+                                    <option value="1000|50">1000条(50元)</option>
+                                    <option value="10000|380">1万条(380元)</option>
+  <option value="110000|600">无限条/一次性买断(600元)</option>
+                                </select>
+
+                                <?php
+                            //生成外部订单号
+                            $WIDout_trade_no=date('YmdHis', time()).rand(1000,9000);
+                            
+                            $WIDsubject=$data['domain'];
+                            $WIDsubject.="shopxo导入淘宝商品充值";
+                            $WIDbody="0||".$data["domain"]."|"."ShopXoTaobaoImport"."|";
+                             ?>
+                                <input type="hidden" name="WIDout_trade_no" value="{{:$WIDout_trade_no; }}" />
+                                <input type="hidden" id="WIDsubject" name="WIDsubject" value="{{:$WIDsubject;}}" />
+                                <input type="hidden" name="WIDbody" id="WIDbody" value="{{:$WIDbody;}}" />
+                                <input type="hidden" name="WIDbody2" id="WIDbody2" value="{{:$WIDbody;}}" />
+                                <input type="hidden" name="RenewalMonth" id="RenewalNum" value="1" />
+                                <input type="hidden" name="WIDtotal_amount" id="WIDtotal_amount" value="1000" />
+                                <button type="submit" onclick="next2()" class="am-btn am-btn-warning am-btn-sm">
+                                    <i class="am-icon-shopping-cart"></i>
+                                    充值/购买
+                                </button>
+                          (可以充值按条数计费，也可以一次性买断)。
+                                充值完成后请刷新此页面，充值或使用有问题请联系qq36105155。<img  style="CURSOR: pointer;position:relative;top:7px;" onclick="javascript:window.open('tencent://message/?uin=36105155', '_blank', 'height=502, width=644,toolbar=no,scrollbars=no,menubar=no,status=no');"  border="0" SRC=http://wpa.qq.com/pa?p=2:36105155:51 alt="点击联系客服">
+                            </form>
+
+
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <!-- 会员等级 -->
+            <div class="am-panel am-panel-secondary membershiplevel-level-list">
+
+
+                <!--tab开始-->
+
+                <div class="am-tabs" data-am-tabs>
+                    <ul class="am-tabs-nav am-nav am-nav-tabs">
+                        <li class="am-active"><a href="#tab1">已导入链接</a></li>
+
+                        <li><a href="#tab3">导入链接</a></li>
+                    </ul>
+
+                    <div class="am-tabs-bd">
+                        <div class="am-tab-panel am-fade am-in am-active" id="tab1">
+                            <iframe width="100%" height="100%" frameborder="no" border="0" scrolling="no"
+                                marginwidth="0" marginheight="0" scrolling="no" allowtransparency="yes"
+                                style="height:750px;" src="https://www.1jian.vip/shopxo/PublishLinksNew.php?appkey= {{:$data['appkey']}}&shopxo_domains_id=
+                            {{:$data['id']}}">
+
+
+                            </iframe>
+
+
+                        </div>
+
+                        <div class="am-tab-panel am-fade" id="tab3">
+                            <!-- form start -->
+                            <form class="am-form form-validation view-save"
+                                action="{{:PluginsAdminUrl('taobao_import_1jian', 'admin', 'SaveUrls')}}" method="POST"
+                                request-type="ajax-url"
+                                request-value="{{:PluginsAdminUrl('taobao_import_1jian', 'admin', 'index')}}">
+
+
+                                <div class="am-form-group">
+                                    <label style="float:left;width:120px;">商品分类(可多选)</label>
+                                    <div class="rules-value" style="width:600px;">
+                                    <input type="hidden" name="version" value='{{$OriginalConfig.version}}'/>
+                                        <select name="pid" multiple="multiple" class="am-radius chosen-select forth-selection-form-category"
+                                            data-placeholder="可选择..." data-validation-message="请选择商品分类">
+                                            <option value="0">所有分类</option>
+                                            {{if !empty($goods_category_list)}}
+                                            {{foreach $goods_category_list as $v}}
+                                            <option value="{{$v.id}}">一级 - {{$v.name}}</option>
+                                            {{if !empty($v['items'])}}
+                                            {{foreach $v.items as $vs}}
+                                            <option style="padding-left: 30px;" value="{{$vs.id}}">二级 - {{$vs.name}}
+                                            </option>
+                                            {{if !empty($vs['items'])}}
+                                            {{foreach $vs.items as $vss}}
+                                            <option style="padding-left: 60px;" value="{{$vss.id}}">三级 - {{$vss.name}}
+                                            </option>
+                                            {{/foreach}}
+                                            {{/if}}
+                                            {{/foreach}}
+                                            {{/if}}
+                                            {{/foreach}}
+                                            {{/if}}
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="am-form-group">
+                                    <label style="float:left;">价格公式:</label>
+                                    <div class="rules-value" style="padding-bottom:30px;margin-left:20px;">
+                                        <span style="float:left;margin-right:20px"> 发布的价格=原来的价格</span>
+                                        <span><select name="act_type" style="width:80px;float:left">
+                                                <option value="1" selected>+</option>
+                                                <option value="2">-</option>
+                                                <option value="3">x</option>
+
+                                            </select></span>
+                                        <input type="number" placeholder="修改的价格" min="0" step="0.01" name="price_add"
+                                            data-validation-message="请填写价格值" class="am-radius" value="0" required
+                                            style="width:200px;float:left" />
+                                    </div>
+                                </div>
+      <div class="am-form-group">
+                                    <label style="float:left;">虚拟销量(都为0不生成):</label>
+                                    <div class="rules-value" style="padding-bottom:30px;margin-left:20px;">
+                                       
+                                        <span><input type="number" placeholder="最小" min="0" name="min_virtual_sales_count"
+                                            data-validation-message="" class="am-radius" value="0" required
+                                            style="width:100px;float:left" /></span>
+                                        <span style="float:left;">-</span>
+                                        <input type="number" placeholder="最大" min="0"  name="max_virtual_sales_count"
+                                            data-validation-message="" class="am-radius" value="0" required
+                                            style="width:100px;float:left" />
+                                    </div>
+                                    
+                                </div>
+                                <div class="am-form-group">
+                                    <label class="block">是否抓取视频(建议和第三方存储七牛/oss/腾讯云存储配合使用)</label>
+                                    <input name="IsGetVideo" value="1" type="checkbox" data-off-text="否"
+                                        data-on-text="是" data-size="xs" data-on-color="success" data-off-color="default"
+                                        data-handle-width="50" data-am-switch aria-checked="true" />
+                                </div>
+  <div class="am-form-group" style="display: none">
+                                    <label class="block">是否抓取评论</label>
+                                    <input name="IsGetComment" value="1" type="checkbox" data-off-text="否"
+                                        data-on-text="是" data-size="xs" data-on-color="success" data-off-color="default"
+                                        data-handle-width="50" data-am-switch aria-checked="true" />
+                                </div>
+
+
+                                <div class="am-form-group">
+                                    <label>商品链接</label>
+                                    <div class="rules-value" style="padding-bottom:10px;">
+
+                                        <span>
+                                            <textarea class="" rows="15" name="urls" id="urls"></textarea>
+                                        </span>
+
+                                    </div>
+                                </div>
+                                <div class="am-alert am-alert-warning" data-am-alert="">
+                                    <button type="button" class="am-close">&times;</button>
+                                    <p>
+                                        使用说明 <br>
+                                        <span class="mini-tips-text">
+                                            每行一个淘宝链接，支持天猫 、 淘宝集市和阿里巴巴。
+                                        </span>
+                                    </p>
+                                </div>
+
+
+
+
+
+                                <div class="am-form-group am-form-group-refreshing">
+
+                                    <button type="submit"
+                                        class="am-btn am-btn-primary am-radius btn-loading-example am-btn-sm am-btn-block"
+                                        data-am-loading="{loadingText:'处理中...'}">提交</button>
+                                </div>
+
+                            </form>
+                            <!-- form end -->
+                        </div>
+                    </div>
+                </div>
+                <!--tab结束-->
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- right content end  -->
+<script>
+
+    window.next2 = function () {
+
+        var WIDbody = $("#WIDbody2").val();
+
+        var RenewalNum = $('#RenewalNum').val();
+
+
+        RenewalNum = RenewalNum.split("|");
+
+        WIDbody += RenewalNum[0];
+        $("#WIDbody").val(WIDbody);
+        $("#WIDtotal_amount").val(RenewalNum[1]);
+        $("#ToPayForm").submit();
+        // alert("请在打开的页面完成支付");
+        location.reload(true);
+    };
+</script>>
+<!-- footer start -->
+{{include file="public/footer" /}}
+<!-- footer end -->
