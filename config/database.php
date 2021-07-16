@@ -16,15 +16,15 @@ return [
     // 数据库类型
     'type'            => 'mysql',
     // 服务器地址
-    'hostname'        => 'localhost',
+    'hostname'        => 'rm-wz96ki4xk34976ywfyo.mysql.rds.aliyuncs.com',
     // 数据库名
-    'database'        => 'www_gdddfkj_com',
+    'database'        => 'shuiguo',
     // 用户名
-    'username'        => 'www_gdddfkj_com',
+    'username'        => 'kongqin',
     // 密码
-    'password'        => 'XRzkZrZBeF',
+    'password'        => '123muTOUren',
     // 端口
-    'hostport'        => '8806',
+    'hostport'        => '3306',
     // 连接dsn
     'dsn'             => '',
     // 数据库连接参数
